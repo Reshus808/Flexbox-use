@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid</title>
+  <style>
+    body{
+      font-family: arial,serif;
+    }
+    .container{
+      background: #eee;
+      width: 700px;
+      margin: 50px  0 0 50px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /*grid-template-columns: 50% repeat(2, 200px);*/
+      /*grid-template-columns: 1fr 4fr 1fr;*/
+      /*grid-template-columns: 100px auto 200px;*/
+      grid-template-rows:  100px 100px;
+      /*grid-template-rows: 1fr 200px;*/
+      /*grid-gap: 20px;*/
+      /*grid-column-gap: 20px;*/
+      /*grid-row-gap: 15px;*/
+      grid-gap: 25px 50px;
+    }
+    .item1{
+      background: orangered;
+      /*grid-row-start: 2;*/
+      /*grid-row-end: 3;*/
+      /*grid-column-start: 3;*/
+      /*grid-column-end: 4;*/
+    /*  dorthand*/
+    /*  grid-row: 2 / 3;*/
+    /*  grid-column: 3 / 4;*/
+
+      grid-area: 2 / 3 / 3 / 4;
+
+    }
+    .item2{
+      background: #4b6493;
+    }
+    .item3{
+      background: #378860;
+    }
+    .item4{
+      background: #969537;
+    }
+    .item5{
+      background: #a99187;
+    }
+    .item6{
+      background: #795243;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  </style>
+</head>
+<body>
+<h1>Grid Tutorial: CSS Property</h1>
+<div class="container">
+  <div class="items item1">First</div>
+  <div class="items item2">Second</div>
+  <div class="items item3">Third</div>
+  <div class="items item4">Fourth</div>
+  <div class="items item5">Fifth</div>
+  <div class="items item6">Sixth</div>
+</div>
+</body>
+</html>

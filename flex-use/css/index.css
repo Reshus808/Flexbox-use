@@ -1,0 +1,146 @@
+*{
+  box-sizing: border-box;
+  /*margin: 0;*/
+  /*padding: 0;*/
+}
+
+body{
+  font-family: arial, serif;
+  /*background-color: lightpink;*/
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+}
+a{
+  text-decoration: none;
+}
+header{
+  display: flex;
+  background-color: #566c2b;
+  align-items: center;
+  padding: 10px 0;
+}
+header ul{
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+header a{
+  color: white;
+}
+#logo{
+  margin: 0 auto;
+  font-size: 30px;
+}
+#menu li{
+  padding: 10px;
+}
+#social-links li{
+  padding: 10px;
+}
+
+/*main*/
+#main{
+  display: flex;
+}
+aside{
+  padding: 10px;
+  flex: 0 0 20vw;
+  background-color: beige;
+}
+aside ul{
+  list-style: none;
+  padding: 0;
+}
+aside ul a{
+  color: #566c2b;
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid grey;
+}
+aside img{
+  width: 100%;
+  height: 50%;
+}
+article{
+  padding: 10px;
+}
+.services-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.service-box{
+  border: 1px solid #eee;
+  flex-basis: 32%;
+  padding: 10px;
+  max-width: 370px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-box img{
+  width: 100%;
+  /*height: 50%;*/
+}
+.service-box h3{
+  margin: 5px 0 10px;
+}
+.service-box p{
+  margin: 0 0 10px;
+}
+.call-to-action{
+  align-self: flex-start;
+  margin-top: auto;
+}
+.call-to-action a{
+  background-color: grey;
+  border: 2px solid transparent;
+  color: white;
+  padding: 8px 13px;
+  display: block;
+}
+.call-to-action a:hover {
+  background-color: transparent;
+  border: 2px solid grey;
+  color: grey;
+}
+footer{
+  background-color: #566c2b;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+@media screen and (max-width: 700px) {
+  .service-box{
+    flex-basis: 48%;
+  }
+  aside{
+    flex: 0 0 30vw;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  header{
+    flex-direction: column;
+  }
+  #logo{
+    order: -1;
+  }
+  #main{
+    flex-direction: column;
+  }
+  article{
+    order: -1;
+  }
+  .services-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  h2{
+    text-align: center;
+  }
+}
